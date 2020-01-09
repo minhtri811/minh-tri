@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34" height="31" viewBox="0 0 34 31">
+    <defs>
+        <path id="a" d="M23.744.028a9.52 9.52 0 0 0-4.406 1.067 9.78 9.78 0 0 0-2.53 1.882 9.78 9.78 0 0 0-2.529-1.882A9.52 9.52 0 0 0 9.873.028C4.525.028.175 4.42.175 9.818c0 3.824 2 7.885 5.945 12.071 3.294 3.495 7.327 6.408 10.13 8.237l.558.364.559-.364c2.803-1.829 6.836-4.742 10.13-8.237 3.945-4.186 5.945-8.247 5.945-12.07 0-5.399-4.35-9.79-9.698-9.79z"/>
+        <linearGradient id="c" x1="104.154%" x2="3.141%" y1="19.088%" y2="69.125%">
+            <stop offset="0%" stop-color="#FFF"/>
+            <stop offset="100%" stop-color="#FFEEE3"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(.226 .372)">
+        <mask id="b" fill="#fff">
+            <use xlink:href="#a"/>
+        </mask>
+        <use fill="#00B517" fill-rule="nonzero" xlink:href="#a"/>
+        <path d="M-12.03 34.97l39.054 5.515C40.902 1.746 42.85-12.372 32.868-1.871 17.895 13.881-.46 17.759-15.58 19.449c-10.08 1.127-8.897 6.301 3.55 15.521z" mask="url(#b)" opacity=".36" transform="rotate(10 8.393 17.627)"/>
+        <path fill="url(#c)" d="M-17.693 26.2l39.053 5.515c13.878-38.738 15.826-52.857 5.844-42.356-7.054 7.421-21.05 8.457-18.9 13.5C10.552 8.137-4.88 5.695-12.877 6.589c-10.08 1.126-11.686 7.664-4.816 19.613z" mask="url(#b)" opacity=".279" transform="matrix(-1 0 0 1 11.598 0)"/>
+        <circle cx="17.009" cy="29.688" r="3.206" fill="#00B517" mask="url(#b)"/>
+        <circle cx="17.009" cy="28.486" r="7.615" fill="#00B517" mask="url(#b)" opacity=".347"/>
+        <circle cx="16.808" cy="28.286" r="11.824" fill="#00B517" mask="url(#b)" opacity=".347"/>
+        <circle cx="16.808" cy="28.286" r="16.634" fill="#00B517" mask="url(#b)" opacity=".347"/>
+    </g>
+</svg>

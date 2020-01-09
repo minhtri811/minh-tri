@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="220" height="48" viewBox="0 0 220 48">
+    <defs>
+        <path id="a" d="M36.506.044c-2.385 0-4.664.552-6.774 1.64a15.038 15.038 0 0 0-3.889 2.893 15.038 15.038 0 0 0-3.889-2.893A14.638 14.638 0 0 0 15.18.044C6.958.044.269 6.796.269 15.096c0 5.88 3.075 12.123 9.14 18.558 5.065 5.374 11.266 9.853 15.575 12.664l.859.56.859-.56c4.31-2.811 10.51-7.29 15.574-12.664 6.066-6.435 9.141-12.679 9.141-18.558 0-8.3-6.689-15.052-14.91-15.052z"/>
+        <linearGradient id="c" x1="104.154%" x2="3.141%" y1="19.088%" y2="69.125%">
+            <stop offset="0%" stop-color="#FFF"/>
+            <stop offset="100%" stop-color="#FFEEE3"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <text fill="#1C1C1C" font-family="Montserrat-Bold, Montserrat" font-size="31.429" font-weight="bold" letter-spacing="-.21">
+            <tspan x="65.476" y="35.238">inhandao</tspan>
+        </text>
+        <g transform="translate(.347 .573)">
+            <mask id="b" fill="#fff">
+                <use xlink:href="#a"/>
+            </mask>
+            <use fill="#00B517" fill-rule="nonzero" xlink:href="#a"/>
+            <path d="M-18.495 53.767l60.044 8.478C62.886 2.685 65.88-19.022 50.534-2.877 27.514 21.342-.706 27.305-23.954 29.904c-15.5 1.732-13.68 9.687 5.459 23.863z" mask="url(#b)" opacity=".36" transform="rotate(10 12.904 27.102)"/>
+            <path fill="url(#c)" d="M-27.203 40.284l60.044 8.478c21.337-59.56 24.332-81.268 8.985-65.122C30.981-4.95 9.462-3.358 12.767 4.397c3.457 8.112-20.27 4.357-32.566 5.731-15.499 1.733-17.967 11.785-7.404 30.156z" mask="url(#b)" opacity=".279" transform="matrix(-1 0 0 1 17.832 0)"/>
+            <circle cx="26.151" cy="45.646" r="4.93" fill="#00B517" mask="url(#b)"/>
+            <circle cx="26.151" cy="43.797" r="11.709" fill="#00B517" mask="url(#b)" opacity=".347"/>
+            <circle cx="25.843" cy="43.489" r="18.179" fill="#00B517" mask="url(#b)" opacity=".347"/>
+            <circle cx="25.843" cy="43.489" r="25.574" fill="#00B517" mask="url(#b)" opacity=".347"/>
+        </g>
+    </g>
+</svg>
