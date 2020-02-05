@@ -1,0 +1,958 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>INHANDAO</title>
+	<!-- Bootstrap implementation -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap&subset=vietnamese" rel="stylesheet" />
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.2/css/bootstrap-slider.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+</head>
+<body class="campaign-body">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"  crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.2/bootstrap-slider.min.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+	<!-- MDBootstrap Datatables  -->
+	<script type="text/javascript" src="js/datatables.min.js"></script>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky">
+		<div class='container'>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<a class="navbar-brand" href="index.html"><img src='assets/logochuan.png' alt='logo' /></a>
+			<button class="btn btn-success my-2 my-sm-0 mobile-show" data-toggle="modal" data-target="#exampleModal">Đăng nhập</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link active" href="#">Chiến dịch <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Tài trợ</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="address.html">Địa chỉ nhân đạo</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="map.html">Bản đồ</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Giới thiệu</a>
+					</li>
+				</ul>
+				<form class="form-inline my-2 my-lg-0">
+					<button class="btn btn-outline-success my-2 my-sm-0 seach-btn" type="submit"><i class="fa fa-search"></i></button>
+				</form>
+			</div>
+			<button class="btn btn-success my-2 my-sm-0 mobile-hide" type="submit">Đăng nhập</button>
+		</div>
+  </nav>
+  <section class='section-campaign'>
+		<div class='container'>
+			<div class='row'>
+				<div class='col-md-12'>
+					<h5 class="card-title"><i class="fa fa-star" aria-hidden="true"></i>&nbsp;Hỗ trợ trẻ em vùng cao</h5>
+				</div>
+				<div class='col-md-9'>
+					<div class="card" style="border: none;">
+						<img src="assets/child2.jpg" class="card-img-top" alt="...">
+						 <div class="box1">
+							 <div class='box-inside'>
+								 <span>Khởi tạo bởi: &nbsp;</span><img src='./assets/avatar.jpg' alt='avatar' />&nbsp; Phuong Anh Dao
+							 </div>
+							 <div class='box-inside'>
+								 <span>Ngày tạo: &nbsp; </span>23/09/2019
+							 </div>
+							 <div class='box-inside'>
+								 <button class="btn btn-outline-success bg-white my-2 my-sm-0 share-btn w-25" type="submit"><i class="fa fa-share"></i>&nbsp; Chia sẻ</button>
+							 </div>
+						 </div>
+						 <p class="card-text">
+							 <i class="fa fa-quote-left" aria-hidden="true"></i> &nbsp;Tháng 8 này với sự chuẩn bị cho các hoạt động như khai giảng năm học mới và xa hơn là Tết Trung thu bên cạnh đó là những điểm trường mới đang bắt đầu hình thành như Bản Lỷ, Lốm Khiêu (Sơn La) rất cần hỗ trợ kinh phí cũng như những đóng góp đồ dùng, trang thiết bị dạy và học. Vì vậy Quỹ đang rất cần sự ủng hộ nhiệt thành hơn nữa từ các nhà hảo tâm đến các trò nghèo vùng cao.
+							 &nbsp;<i class="fa fa-quote-right" aria-hidden="true"></i>
+						 </p>
+					</div>
+				</div>
+				<div class='col-md-3 chart'>
+					<div class='container2'>
+						 <div class='donutchart'>
+							 <svg width="100%" height="100%" viewBox="0 0 42 42" class="donut">
+								 <circle class="donut-hole" cx="21" cy="21" r="15.91549430918954" fill="#fff"></circle>
+								 <circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#d2d3d4" stroke-width="3"></circle>
+
+								 <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#00b517" stroke-width="3" stroke-dasharray="85 15" stroke-dashoffset="25"></circle>
+								 <g class="chart-text">
+									 <text x="50%" y="62%" class="chart-number" style="font-size: 0.4em;
+										 line-height: 1;
+										 font-weight: 600;
+										 text-anchor: middle;
+										 -moz-transform: translateY(-0.25em);
+										 -ms-transform: translateY(-0.25em);
+										 -webkit-transform: translateY(-0.25em);
+										 transform: translateY(-0.25em);">
+										 90%
+									 </text>
+									</g>
+								</svg>
+							</div>
+					</div>
+					<table>
+						<tbody>
+							<tr>
+								<td>TỔNG SỐ TIỀN TÀI TRỢ</td>
+								<td>415.000.000 đ</td>
+							</tr>
+							<tr>
+								<td>Mục tiêu</td>
+								<td>565.000.000 đ</td>
+							</tr>
+							<tr>
+								<td>Số người tài trợ</td>
+								<td>2391</td>
+							</tr>
+							<tr>
+								<td>Hết hạn</td>
+								<td>Còn 39 ngày</td>
+							</tr>
+						</tbody>
+					</table>
+					<button class="btn btn-success my-2 my-sm-0 w-100" type="submit">Tài trợ ngay&nbsp;<i class="fa fa-chevron-circle-right" aria-hidden="true"></i></button>
+				</div>
+			</div>
+		</div>
+  </section>
+	<section class='campaign-2'>
+		<div class='container'>
+			<div class='row'>
+				<div class='col-md-9'>
+					<div class="container">
+						<ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
+						  <li class="nav-item">
+						    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Chi tiết chiến dịch</a>
+						  </li>
+						  <li class="nav-item">
+						    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Lịch sử quyên góp</a>
+						  </li>
+						  <li class="nav-item">
+						    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Hoạt động chiến dịch</a>
+						  </li>
+						</ul>
+						<div class="tab-content" id="myTabContent">
+						  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+								<h5>Những ngôi trường xây từ lấm lòng</h5>
+								<p>TTO - Một nhóm những người đang làm việc ở huyện miền núi Nam Trà My, Quảng Nam đã cùng bắt tay nhau làm việc có ích cho những học trò ở huyện nghèo này. Đó là CLB Kết nối yêu thương Nam Trà My.</p>
+								<img src='./assets/child.jpg' alt='child' />
+
+								<p><br  />Trời nắng như đổ lửa, thầy Nguyễn Trần Vỹ, chủ nhiệm CLB Kết nối yêu thương, nói vang trong điện thoại: "Chờ xíu nha, anh đi sửa điện chỗ điểm trường Trà Tập".</p>
+								<h5>Từ những viên gạch đầu tiên</h5>
+								<p>40 tuổi, ngót 20 năm thầy Vỹ đã cắm nóc ở huyện miền núi này. Nheo mắt nhìn xa, thầy Vỹ nhớ những ngày phải cuốc bộ hơn sáu tiếng để vào điểm trường Tắk Lũ, xã Trà Mai dạy học.
+									<br  />
+"Mình là giáo viên, bạn cũng giáo viên nhưng mình đang dạy trong một cái "chuồng" thì đúng hơn, lớp học lợp tranh, thưng vách bằng cây rừng. Mùa đông phải nhóm lửa giữa lớp để sưởi ấm" - thầy Vỹ nhớ lại.
+<br  />
+Thầy Vỹ mang theo ước mơ của cả những thầy cô cắm nóc khác: "Làm sao có một mái trường kín gió hơn". Khi về làm chuyên viên tại Phòng giáo dục, thầy Vỹ bắt đầu hiện thực hóa điều ấy.</p>
+							</div>
+						  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+								<div class='top'>
+									<strong> 1395 đóng góp </strong>
+									<div class='filter'>
+										  <input name='dates' class="form-control ip1" id="usr">
+											<div class="input-group">
+										    <input type="text" class="form-control" placeholder="Search">
+										    <div class="input-group-append">
+										      <button class="btn btn-outline-secondary" type="button">
+										        <i class="fa fa-search"></i>
+										      </button>
+										    </div>
+										  </div>
+
+									</div>
+								</div>
+								<div style='overflow-x: auto'>
+								<table class="table table-bordered table-sm list-donated" cellspacing="0" width="100%">
+								<!-- <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%"> -->
+								  <thead>
+								    <tr>
+								      <th class="th-sm"><span>ID</span>
+								      </th>
+								      <th class="th-sm"><span>THỜI GIAN</span>
+												<div class='filter-btn'>
+													<i class="fa fa-caret-up" aria-hidden="true"></i>
+													<i class="fa fa-caret-down" aria-hidden="true"></i>
+												</div>
+								      </th>
+								      <th class="th-sm"><span>NGƯỜI QUYÊN GÓP</span>
+
+								      </th>
+								      <th class="th-sm"><span>SỐ TIỀN</span>
+												<div class='filter-btn'>
+													<i class="fa fa-caret-up" aria-hidden="true"></i>
+													<i class="fa fa-caret-down" aria-hidden="true"></i>
+												</div>
+								      </th>
+								    </tr>
+								  </thead>
+								  <tbody>
+								    <tr>
+								      <td>1</td>
+								      <td>
+												<p class='date'>23-10-2019</p>
+												<p class='time'>19:49:10</p>
+											</td>
+								      <td>
+												<div class='donater'>
+													<img src='./assets/redplus.jpg'></img>
+													<div class='name-mobile'>
+														<div class='name'>
+															buiminhtri83
+														</div>
+														<div class='date'>
+															019505xxxx94
+														</div>
+														<div class='wish'>
+															Chuc mung hanh phuc
+														</div>
+													</div>
+												</div>
+											</td>
+								      <td class='money2'>2.000.000</td>
+								    </tr>
+										<tr>
+								      <td>1</td>
+								      <td>
+												<p class='date'>23-10-2019</p>
+												<p class='time'>19:49:10</p>
+											</td>
+								      <td>
+												<div class='donater'>
+													<img src='./assets/redplus.jpg'></img>
+													<div class='name-mobile'>
+														<div class='name'>
+															buiminhtri83
+														</div>
+														<div class='date'>
+															019505xxxx94
+														</div>
+														<div class='wish'>
+															Chuc mung hanh phuc
+														</div>
+													</div>
+												</div>
+											</td>
+								      <td class='money2'>2.000.000</td>
+								    </tr><tr>
+								      <td>1</td>
+								      <td>
+												<p class='date'>23-10-2019</p>
+												<p class='time'>19:49:10</p>
+											</td>
+								      <td>
+												<div class='donater'>
+													<img src='./assets/redplus.jpg'></img>
+													<div class='name-mobile'>
+														<div class='name'>
+															buiminhtri83
+														</div>
+														<div class='date'>
+															019505xxxx94
+														</div>
+														<div class='wish'>
+															Chuc mung hanh phuc
+														</div>
+													</div>
+												</div>
+											</td>
+								      <td class='money2'>2.000.000</td>
+								    </tr><tr>
+								      <td>1</td>
+								      <td>
+												<p class='date'>23-10-2019</p>
+												<p class='time'>19:49:10</p>
+											</td>
+								      <td>
+												<div class='donater'>
+													<img src='./assets/redplus.jpg'></img>
+													<div class='name-mobile'>
+														<div class='name'>
+															buiminhtri83
+														</div>
+														<div class='date'>
+															019505xxxx94
+														</div>
+														<div class='wish'>
+															Chuc mung hanh phuc
+														</div>
+													</div>
+												</div>
+											</td>
+								      <td class='money2'>2.000.000</td>
+								    </tr><tr>
+								      <td>1</td>
+								      <td>
+												<p class='date'>23-10-2019</p>
+												<p class='time'>19:49:10</p>
+											</td>
+								      <td>
+												<div class='donater'>
+													<img src='./assets/redplus.jpg'></img>
+													<div class='name-mobile'>
+														<div class='name'>
+															buiminhtri83
+														</div>
+														<div class='date'>
+															019505xxxx94
+														</div>
+														<div class='wish'>
+															Chuc mung hanh phuc
+														</div>
+													</div>
+												</div>
+											</td>
+								      <td class='money2'>2.000.000</td>
+								    </tr><tr>
+								      <td>1</td>
+								      <td>
+												<p class='date'>23-10-2019</p>
+												<p class='time'>19:49:10</p>
+											</td>
+								      <td>
+												<div class='donater'>
+													<img src='./assets/redplus.jpg'></img>
+													<div class='name-mobile'>
+														<div class='name'>
+															buiminhtri83
+														</div>
+														<div class='date'>
+															019505xxxx94
+														</div>
+														<div class='wish'>
+															Chuc mung hanh phuc
+														</div>
+													</div>
+												</div>
+											</td>
+								      <td class='money2'>2.000.000</td>
+								    </tr><tr>
+								      <td>1</td>
+								      <td>
+												<p class='date'>23-10-2019</p>
+												<p class='time'>19:49:10</p>
+											</td>
+								      <td>
+												<div class='donater'>
+													<img src='./assets/redplus.jpg'></img>
+													<div class='name-mobile'>
+														<div class='name'>
+															buiminhtri83
+														</div>
+														<div class='date'>
+															019505xxxx94
+														</div>
+														<div class='wish'>
+															Chuc mung hanh phuc
+														</div>
+													</div>
+												</div>
+											</td>
+								      <td class='money2'>2.000.000</td>
+								    </tr><tr>
+								      <td>1</td>
+								      <td>
+												<p class='date'>23-10-2019</p>
+												<p class='time'>19:49:10</p>
+											</td>
+								      <td>
+												<div class='donater'>
+													<img src='./assets/redplus.jpg'></img>
+													<div class='name-mobile'>
+														<div class='name'>
+															buiminhtri83
+														</div>
+														<div class='date'>
+															019505xxxx94
+														</div>
+														<div class='wish'>
+															Chuc mung hanh phuc
+														</div>
+													</div>
+												</div>
+											</td>
+								      <td class='money2'>2.000.000</td>
+								    </tr><tr>
+								      <td>1</td>
+								      <td>
+												<p class='date'>23-10-2019</p>
+												<p class='time'>19:49:10</p>
+											</td>
+								      <td>
+												<div class='donater'>
+													<img src='./assets/redplus.jpg'></img>
+													<div class='name-mobile'>
+														<div class='name'>
+															buiminhtri83
+														</div>
+														<div class='date'>
+															019505xxxx94
+														</div>
+														<div class='wish'>
+															Chuc mung hanh phuc
+														</div>
+													</div>
+												</div>
+											</td>
+								      <td class='money2'>2.000.000</td>
+								    </tr><tr>
+								      <td>1</td>
+								      <td>
+												<p class='date'>23-10-2019</p>
+												<p class='time'>19:49:10</p>
+											</td>
+								      <td>
+												<div class='donater'>
+													<img src='./assets/redplus.jpg'></img>
+													<div class='name-mobile'>
+														<div class='name'>
+															buiminhtri83
+														</div>
+														<div class='date'>
+															019505xxxx94
+														</div>
+														<div class='wish'>
+															Chuc mung hanh phuc
+														</div>
+													</div>
+												</div>
+											</td>
+								      <td class='money2'>2.000.000</td>
+								    </tr><tr>
+								      <td>1</td>
+								      <td>
+												<p class='date'>23-10-2019</p>
+												<p class='time'>19:49:10</p>
+											</td>
+								      <td>
+												<div class='donater'>
+													<img src='./assets/redplus.jpg'></img>
+													<div class='name-mobile'>
+														<div class='name'>
+															buiminhtri83
+														</div>
+														<div class='date'>
+															019505xxxx94
+														</div>
+														<div class='wish'>
+															Chuc mung hanh phuc
+														</div>
+													</div>
+												</div>
+											</td>
+								      <td class='money2'>2.000.000</td>
+								    </tr><tr>
+								      <td>1</td>
+								      <td>
+												<p class='date'>23-10-2019</p>
+												<p class='time'>19:49:10</p>
+											</td>
+								      <td>
+												<div class='donater'>
+													<img src='./assets/redplus.jpg'></img>
+													<div class='name-mobile'>
+														<div class='name'>
+															buiminhtri83
+														</div>
+														<div class='date'>
+															019505xxxx94
+														</div>
+													</div>
+												</div>
+											</td>
+								      <td class='money2'>2.000.000</td>
+								    </tr><tr>
+								      <td>1</td>
+								      <td>
+												<p class='date'>23-10-2019</p>
+												<p class='time'>19:49:10</p>
+											</td>
+								      <td>
+												<div class='donater'>
+													<img src='./assets/redplus.jpg'></img>
+													<div class='name-mobile'>
+														<div class='name'>
+															buiminhtri83
+														</div>
+														<div class='date'>
+															019505xxxx94
+														</div>
+													</div>
+												</div>
+											</td>
+								      <td class='money2'>2.000.000</td>
+								    </tr><tr>
+								      <td>1</td>
+								      <td>
+												<p class='date'>23-10-2019</p>
+												<p class='time'>19:49:10</p>
+											</td>
+								      <td>
+												<div class='donater'>
+													<img src='./assets/redplus.jpg'></img>
+													<div class='name-mobile'>
+														<div class='name'>
+															buiminhtri83
+														</div>
+														<div class='date'>
+															019505xxxx94
+														</div>
+													</div>
+												</div>
+											</td>
+								      <td class='money2'>2.000.000</td>
+								    </tr>
+
+								  </tbody>
+								</table>
+							</div>
+								<div class='bottom'>
+									<div class="input-group">
+										<select type="select" value='20' class="form-control">
+											<option value='20' selected> Hiên thị: 20 </option>
+											<option value='10'> Hiển thị: 10 </option>
+										</select>
+								</div>
+								<nav aria-label="Page navigation example">
+								  <ul class="pagination">
+								    <li class="page-item"><a class="page-link" href="#">Trước</a></li>
+								    <li class="page-item"><a class="page-link" href="#">1</a></li>
+								    <li class="page-item"><a class="page-link" href="#">2</a></li>
+								    <li class="page-item"><a class="page-link" href="#">3</a></li>
+								    <li class="page-item"><a class="page-link" href="#">Sau</a></li>
+								  </ul>
+								</nav>
+							</div>
+						</div>
+						  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+								<div class='content-big'>
+									<div class='head'>
+										<div class='icon-container'>
+											<i class="fa fa-circle" aria-hidden="true"></i>
+										</div>
+										<span>12/09/2019 14:45:00</span>
+									</div>
+									<div class='content'>
+										<h5>Những ngôi trường xây từ lấm lòng</h5>
+										<p>TTO - Một nhóm những người đang làm việc ở huyện miền núi Nam Trà My, Quảng Nam đã cùng bắt tay nhau làm việc có ích cho những học trò ở huyện nghèo này. Đó là CLB Kết nối yêu thương Nam Trà My.</p>
+										<div class='img-container'>
+											<img src='./assets/child.jpg' alt='child' />
+										</div>
+									</div>
+								</div>
+								<div class='content-big'>
+									<div class='head'>
+										<div class='icon-container'>
+											<i class="fa fa-circle" aria-hidden="true"></i>
+										</div>
+										<span>12/09/2019 14:45:00</span>
+									</div>
+									<div class='content'>
+										<h5>Những ngôi trường xây từ lấm lòng</h5>
+										<p>TTO - Một nhóm những người đang làm việc ở huyện miền núi Nam Trà My, Quảng Nam đã cùng bắt tay nhau làm việc có ích cho những học trò ở huyện nghèo này. Đó là CLB Kết nối yêu thương Nam Trà My.</p>
+									</div>
+								</div>
+							</div>
+					</div>
+				</div>
+				</div>
+				<div class='col-md-3' style='padding-left: 0; padding-right: 0'>
+					<table class="table table-striped table-bordered table-sm list-be-donated" cellspacing="0" width="100%">
+					<!-- <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%"> -->
+						<thead>
+							<tr>
+								<th class="th-sm">
+									<div class='list-head'>
+										<i class="fa fa-file-text-o" aria-hidden="true"></i>
+										<span>Danh sách người được hỗ trợ</span>
+									</div>
+
+								</th>
+							</tr>
+						</thead>
+						<tbody id='style-1'>
+							<tr>
+								<td>
+									<div class='list-head'>
+										<div class='no'> 1 </div>
+										<div>
+											<div class='name'> Nguyen Van A </div>
+											<div class='time'> Dia chi: Ban Lac. Chieng Khoang, Bac Yen, Son La </div>
+										</div>
+									</div>
+
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class='list-head'>
+										<div class='no'> 1 </div>
+										<div>
+											<div class='name'> Nguyen Van A </div>
+											<div class='time'> Dia chi: Ban Lac. Chieng Khoang, Bac Yen, Son La </div>
+										</div>
+									</div>
+
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class='list-head'>
+										<div class='no'> 1 </div>
+										<div>
+											<div class='name'> Nguyen Van A </div>
+											<div class='time'> Dia chi: Ban Lac. Chieng Khoang, Bac Yen, Son La </div>
+										</div>
+									</div>
+
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class='list-head'>
+										<div class='no'> 1 </div>
+										<div>
+											<div class='name'> Nguyen Van A </div>
+											<div class='time'> Dia chi: Ban Lac. Chieng Khoang, Bac Yen, Son La </div>
+										</div>
+									</div>
+
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class='list-head'>
+										<div class='no'> 1 </div>
+										<div>
+											<div class='name'> Nguyen Van A </div>
+											<div class='time'> Dia chi: Ban Lac. Chieng Khoang, Bac Yen, Son La </div>
+										</div>
+									</div>
+
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class='list-head'>
+										<div class='no'> 1 </div>
+										<div>
+											<div class='name'> Nguyen Van A </div>
+											<div class='time'> Dia chi: Ban Lac. Chieng Khoang, Bac Yen, Son La </div>
+										</div>
+									</div>
+
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class='list-head'>
+										<div class='no'> 1 </div>
+										<div>
+											<div class='name'> Nguyen Van A </div>
+											<div class='time'> Dia chi: Ban Lac. Chieng Khoang, Bac Yen, Son La </div>
+										</div>
+									</div>
+
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class='list-head'>
+										<div class='no'> 1 </div>
+										<div>
+											<div class='name'> Nguyen Van A </div>
+											<div class='time'> Dia chi: Ban Lac. Chieng Khoang, Bac Yen, Son La </div>
+										</div>
+									</div>
+
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class='list-head'>
+										<div class='no'> 1 </div>
+										<div>
+											<div class='name'> Nguyen Van A </div>
+											<div class='time'> Dia chi: Ban Lac. Chieng Khoang, Bac Yen, Son La </div>
+										</div>
+									</div>
+
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class='list-head'>
+										<div class='no'> 1 </div>
+										<div>
+											<div class='name'> Nguyen Van A </div>
+											<div class='time'> Dia chi: Ban Lac. Chieng Khoang, Bac Yen, Son La </div>
+										</div>
+									</div>
+
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class='list-head'>
+										<div class='no'> 1 </div>
+										<div>
+											<div class='name'> Nguyen Van A </div>
+											<div class='time'> Dia chi: Ban Lac. Chieng Khoang, Bac Yen, Son La </div>
+										</div>
+									</div>
+
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class='list-head'>
+										<div class='no'> 1 </div>
+										<div>
+											<div class='name'> Nguyen Van A </div>
+											<div class='time'> Dia chi: Ban Lac. Chieng Khoang, Bac Yen, Son La </div>
+										</div>
+									</div>
+
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class='list-head'>
+										<div class='no'> 1 </div>
+										<div>
+											<div class='name'> Nguyen Van A </div>
+											<div class='time'> Dia chi: Ban Lac. Chieng Khoang, Bac Yen, Son La </div>
+										</div>
+									</div>
+
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class='list-head'>
+										<div class='no'> 1 </div>
+										<div>
+											<div class='name'> Nguyen Van A </div>
+											<div class='time'> Dia chi: Ban Lac. Chieng Khoang, Bac Yen, Son La </div>
+										</div>
+									</div>
+
+								</td>
+							</tr>
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<section class='section25-campaign'>
+		<div class='container'>
+			<div class='row'>
+				<div class='col-md-12'>
+					<h5> Các chiến dịch khác </h5>
+				</div>
+				<div class='item col-md-4'>
+					<div class='card'>
+						<div class='card-body'>
+							<a href="#"><h5> Hỗ trợ gia đình chị Hương bị ung thư vú </h5>
+							<img src='./assets/child.jpg' /></img></a>
+							<div class="text-description">
+							Là Quỹ hoạt động phi lợi nhuận nhằm mục đích tham gia hỗ trợ học sinh nghèo vùng cao Việt Nam
+							có bữa ăn tại lớp nhiều dinh dưỡng hơn, có quần áo ấm, ủng, đồ dùng học tập, sách truyện,
+							thuốc chữa bệnh, ký túc xá, phòng học...
+						</div>
+						</div>
+						<div class='card-footer'>
+							<span class='percent'> 45% </span>
+							<input id="ex8" data-slider-id='ex1Slider' type="text"/></input>
+							<div class='process'>
+								<div class='ed'>
+									<div class='money1'> 78.000.000 vnđ </div>
+									<div> Đã ủng hộ </div>
+								</div>
+								<div class='target'>
+									<div class='money2'> 178.000.000 vnđ </div>
+									<div> Mục tiêu </div>
+								</div>
+							</div>
+							<div class="money">
+							<button class="btn btn-outline-success my-2 my-sm-0 share-btn" type="submit"><i class="fa fa-share"></i>&nbsp; Chia sẻ</button>
+							<button class="btn btn-outline-success my-2 my-sm-0 donate-btn" type="submit"> Tài trợ &nbsp;<i class="fa fa-chevron-circle-right"></i></button>
+						</div>
+					</div>
+					</div>
+				</div>
+				<div class='item col-md-4'>
+					<div class='card'>
+						<div class='card-body'>
+							<a href="#"><h5> Hỗ trợ gia đình chị Hương bị ung thư vú </h5>
+							<img src='./assets/child.jpg' /></img></a>
+							<div class="text-description">
+							Là Quỹ hoạt động phi lợi nhuận nhằm mục đích tham gia hỗ trợ học sinh nghèo vùng cao Việt Nam
+							có bữa ăn tại lớp nhiều dinh dưỡng hơn, có quần áo ấm, ủng, đồ dùng học tập, sách truyện,
+							thuốc chữa bệnh, ký túc xá, phòng học...
+						</div>
+						</div>
+						<div class='card-footer'>
+							<span class='percent'> 45% </span>
+							<input id="ex9" data-slider-id='ex1Slider' type="text"/></input>
+							<div class='process'>
+								<div class='ed'>
+									<div class='money1'> 78.000.000 vnđ </div>
+									<div> Đã ủng hộ </div>
+								</div>
+								<div class='target'>
+									<div class='money2'> 178.000.000 vnđ </div>
+									<div> Mục tiêu </div>
+								</div>
+							</div>
+							<div class="money">
+							<button class="btn btn-outline-success my-2 my-sm-0 share-btn" type="submit"><i class="fa fa-share"></i>&nbsp; Chia sẻ</button>
+							<button class="btn btn-outline-success my-2 my-sm-0 donate-btn" type="submit"> Tài trợ &nbsp;<i class="fa fa-chevron-circle-right"></i></button>
+						</div>
+					</div>
+					</div>
+				</div>
+				<div class='item col-md-4'>
+					<div class='card'>
+						<div class='card-body'>
+							<a href="#"><h5> Hỗ trợ gia đình chị Hương bị ung thư vú </h5>
+							<img src='./assets/child.jpg' /></img></a>
+							<div class="text-description">
+							Là Quỹ hoạt động phi lợi nhuận nhằm mục đích tham gia hỗ trợ học sinh nghèo vùng cao Việt Nam
+							có bữa ăn tại lớp nhiều dinh dưỡng hơn, có quần áo ấm, ủng, đồ dùng học tập, sách truyện,
+							thuốc chữa bệnh, ký túc xá, phòng học...
+						</div>
+						</div>
+						<div class='card-footer'>
+							<span class='percent'> 45% </span>
+							<input id="ex10" data-slider-id='ex1Slider' type="text"/></input>
+							<div class='process'>
+								<div class='ed'>
+									<div class='money1'> 78.000.000 vnđ </div>
+									<div> Đã ủng hộ </div>
+								</div>
+								<div class='target'>
+									<div class='money2'> 178.000.000 vnđ </div>
+									<div> Mục tiêu </div>
+								</div>
+							</div>
+							<div class="money">
+							<button class="btn btn-outline-success my-2 my-sm-0 share-btn" type="submit"><i class="fa fa-share"></i>&nbsp; Chia sẻ</button>
+							<button class="btn btn-outline-success my-2 my-sm-0 donate-btn" type="submit"> Tài trợ &nbsp;<i class="fa fa-chevron-circle-right"></i></button>
+						</div>
+					</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class='see-all'>
+			<a href="campaign-detail.html"> Xem tất cả </a>
+		</div>
+	</section>
+	<!-- asdfasdfdsf  -->
+	<section class='section5'>
+		<div class='container'>
+			<h2>Tổ chức đồng hành</h2>
+			<div class='row'>
+				<div class='col-md-4'>
+					<div class='content'>
+						<img src='assets/redplus.jpg' />
+						<h5>Hội chữ thập đỏ Việt Nam <h5>
+					</div>
+				</div>
+				<div class='col-md-4'>
+					<div class='content'>
+						<img src='assets/vietnampost.jpg' />
+						<h5>Bưu điện Việt Nam <h5>
+					</div>
+				</div>
+				<div class='col-md-4'>
+					<div class='content'>
+						<img src='assets/mb.svg' />
+						<h5>Ngân hàng Quân đội MBBANK <h5>
+					</div>
+				</div>
+			</div>
+		</div>
+  </section>
+  <section class='section6'>
+		<div class='container'>
+			<div class='row'>
+				<div class='col-md-6'>
+					<h5>Về inhandao</h5>
+					<div class='card-text'>
+							Với vai trò là tổ chức xã hội đóng vai trò nòng cốt, cầu nối, điều phối trong các hoạt động nhân đạo trên phạm vi toàn quốc, kể từ năm 2008, Hội Chữ thập đỏ Việt Nam phát động Cuộc vận động  "Mỗi tổ chức, mỗi cá nhân gắn với một địa chỉ nhân đạo”.
+					</div>
+					<h5>Tài trợ thiện nguyện</h5>
+					<div class='card-text'>
+							Thiện nguyện là những hành động trợ giúp người yếu kém. Hoạt động từ thiện có thể thông qua hình thức quyên góp, hiến tặng bằng tiền, vật phẩm, thời gian hay là cứu trợ nhân đạo, xóa đói giảm nghèo, chăm sóc sức khỏe hay là những hành động trợ giúp tinh thần như an ủi. Từ thiện có thể là hành động của cá nhân hay là một tập thể, cộng đồng, thông qua các Tổ chức từ thiện.
+					</div>
+				</div>
+				<div class='col-md-6 congtac'>
+					<img src='assets/logo-footer.svg' alt='logo' />
+					<h5>Ban Công tác xã hội – Hội Chữ thập đỏ Việt Nam</h5>
+					<span> <img src='assets/store.svg' alt='address' /> <h6> Địa chỉ: 82 Nguyễn Du, Hà Nội </h6> </span>
+					<span> <img src='assets/phone.svg' alt='phone' /> <h6> Điện thoại: (+8424) 3822 4030, máy lẻ 501-503-506 </h6> </span>
+					<span> <img src='assets/mail.svg' alt='mail' /> <h6> Hòm thư điện tử: banctxh.vnrc@gmail.com </h6> </span>
+				</div>
+			</div>
+		</div>
+  </section>
+	<section class='footer'>
+		Bản quyền thuộc về inhandao
+	</section>
+
+</body>
+<script>
+$(document).ready(function(){
+  $(".nav-tabs a").click(function(){
+    $(this).tab('show');
+  });
+	$('input[name="dates"]').daterangepicker();
+	$("#ex8").slider({
+		min: 00,
+		max: 100,
+		value: 65,
+		enabled: false,
+		// tooltip: 'always'
+	});
+	$("#ex9").slider({
+		min: 00,
+		max: 100,
+		value: 25,
+		enabled: false,
+		// tooltip: 'always'
+	});
+	$("#ex10").slider({
+		min: 00,
+		max: 100,
+		value: 90,
+		enabled: false,
+		// tooltip: 'always'
+	});
+	// var docs = document.getElementsByClassName('tooltip-inner')
+	// var show1 = false, show2 = false, show3 = false
+	// for (var i = 0; i < docs.length; i += 1) {
+	// 	docs[i].innerHTML = docs[i].innerText + '%'
+	// }
+});
+</script>
+</html>

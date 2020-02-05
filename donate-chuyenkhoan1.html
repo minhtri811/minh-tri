@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>INHANDAO</title>
+	<!-- Bootstrap implementation -->
+	<!-- <link href="css/mobile.css" rel="stylesheet" type="text/css" />
+	<link href="css/campaign.css" rel="stylesheet" type="text/css" />
+	<link href="css/address.css" rel="stylesheet" type="text/css" /> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap&subset=vietnamese" rel="stylesheet" />
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.2/css/bootstrap-slider.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
+</head>
+<body class="address-list-body">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"  crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.2/bootstrap-slider.min.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky">
+		<div class='container'>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<a class="navbar-brand" href="index.html"><img src='assets/logochuan.png' alt='logo' /></a>
+			<button class="btn btn-success my-2 my-sm-0 mobile-show" data-toggle="modal" data-target="#exampleModal">Đăng nhập</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="campaign.html">Chiến dịch <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Tài trợ</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" href="#">Địa chỉ nhân đạo</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="map.html">Bản đồ</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Giới thiệu</a>
+					</li>
+				</ul>
+				<form class="form-inline my-2 my-lg-0">
+					<button class="btn btn-outline-success my-2 my-sm-0 seach-btn" type="submit"><i class="fa fa-search"></i></button>
+				</form>
+			</div>
+			<button class="btn btn-success my-2 my-sm-0 mobile-hide" type="submit">Đăng nhập</button>
+		</div>
+  </nav>
+	<section class='section-donate section-donate-3'>
+		<div class='row'>
+			<div class='col-md-12 text-center'>
+				<h5> Kế hoạch tài trợ </h5>
+			</div>
+		</div>
+		<div class='container'>
+			<div class='row'>
+				<div class='col-md-12'>
+					<strong>Tên chiến dịch:</strong>&nbsp;Xóa nỗi đau chất độc da cam
+				</div>
+			</div>
+			<div class='row'>
+				<div class='col-md-12 radio-container'>
+					Chọn hình thức hỗ trợ:&nbsp;&nbsp;
+					<div class='radio-campaign'>
+						<label class="radio-inline"><input type="radio" name="optradio" checked>Chuyển khoản</label>
+						<label class="radio-inline"><input type="radio" name="optradio">Tiền mặt</label>
+					</div>
+				</div>
+			</div>
+			<div class='row'>
+				<div class='col-md-12'>
+					<strong>Thông tin người tài trợ</strong>
+				</div>
+			</div>
+			<div class='row'>
+				<div class='col-md-4'>
+					<input class='form-control' placeholder="Nhập tên">
+				</div>
+				<div class='col-md-4'>
+					<input class='form-control' placeholder="Nhập địa chỉ">
+				</div>
+				<div class='col-md-4'>
+					<input class='form-control' placeholder="Nhập email">
+				</div>
+			</div>
+			<div class='row'>
+				<div class='col-md-12'>
+					<div class="checkbox checkbox-success">
+            <input id="checkbox3" class="styled" type="checkbox" checked>
+            <label for="checkbox3">
+                Hiển thị tên lên danh sách nhà tài trợ
+            </label>
+          </div>
+				</div>
+			</div>
+			<div class='row'>
+				<div class='col-md-4'>
+					<strong>Số tiền ủng hộ</strong>
+					<div class='row'>
+						<div class='col-md-12'>
+							<div class="input-group">
+								<input class='form-control' placeholder="Giá trị">
+								<div class="input-group-prepend">
+									<span class="input-group-text width60"> VNĐ </span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class='col-md-8'>
+					<strong>Lời chúc</strong>
+					<div class='row'>
+						<div class='col-md-12'>
+							<input class='form-control' placeholder="Lời chúc">
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+
+
+			<div class='row'>
+				<div class='col-md-12'>
+					<div class="checkbox checkbox-success">
+						<input id="checkbox4" class="styled" type="checkbox">
+						<label for="checkbox4">
+								Tôi đồng ý với <a>điều khoản và điều kiện</a>
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class='row'>
+				<button class="btn btn-success col-10 col-sm-4 my-2 my-sm-2 m-auto">Tài trợ</button>
+			</div>
+
+		</div>
+
+	</section>
+	<!-- asdfasdfdsf  -->
+	<section class='section5'>
+		<div class='container'>
+			<h2>Tổ chức đồng hành</h2>
+			<div class='row'>
+				<div class='col-md-4'>
+					<div class='content'>
+						<img src='assets/redplus.jpg' />
+						<h5>Hội chữ thập đỏ Việt Nam <h5>
+					</div>
+				</div>
+				<div class='col-md-4'>
+					<div class='content'>
+						<img src='assets/vietnampost.jpg' />
+						<h5>Bưu điện Việt Nam <h5>
+					</div>
+				</div>
+				<div class='col-md-4'>
+					<div class='content'>
+						<img src='assets/mb.svg' />
+						<h5>Ngân hàng Quân đội MBBANK <h5>
+					</div>
+				</div>
+			</div>
+		</div>
+  </section>
+  <section class='section6'>
+		<div class='container'>
+			<div class='row'>
+				<div class='col-md-6'>
+					<h5>Về inhandao</h5>
+					<div class='card-text'>
+							Với vai trò là tổ chức xã hội đóng vai trò nòng cốt, cầu nối, điều phối trong các hoạt động nhân đạo trên phạm vi toàn quốc, kể từ năm 2008, Hội Chữ thập đỏ Việt Nam phát động Cuộc vận động  "Mỗi tổ chức, mỗi cá nhân gắn với một địa chỉ nhân đạo”.
+					</div>
+					<h5>Tài trợ thiện nguyện</h5>
+					<div class='card-text'>
+							Thiện nguyện là những hành động trợ giúp người yếu kém. Hoạt động từ thiện có thể thông qua hình thức quyên góp, hiến tặng bằng tiền, vật phẩm, thời gian hay là cứu trợ nhân đạo, xóa đói giảm nghèo, chăm sóc sức khỏe hay là những hành động trợ giúp tinh thần như an ủi. Từ thiện có thể là hành động của cá nhân hay là một tập thể, cộng đồng, thông qua các Tổ chức từ thiện.
+					</div>
+				</div>
+				<div class='col-md-6 congtac'>
+					<img src='assets/logo-footer.svg' alt='logo' />
+					<h5>Ban Công tác xã hội – Hội Chữ thập đỏ Việt Nam</h5>
+					<span> <img src='assets/store.svg' alt='address' /> <h6> Địa chỉ: 82 Nguyễn Du, Hà Nội </h6> </span>
+					<span> <img src='assets/phone.svg' alt='phone' /> <h6> Điện thoại: (+8424) 3822 4030, máy lẻ 501-503-506 </h6> </span>
+					<span> <img src='assets/mail.svg' alt='mail' /> <h6> Hòm thư điện tử: banctxh.vnrc@gmail.com </h6> </span>
+				</div>
+			</div>
+		</div>
+  </section>
+	<section class='footer'>
+		Bản quyền thuộc về inhandao
+	</section>
+
+</body>
+<script>
+$(document).ready(function(){
+  $(".nav-tabs a").click(function(){
+    $(this).tab('show');
+  });
+	// var docs = document.getElementsByClassName('tooltip-inner')
+	// var show1 = false, show2 = false, show3 = false
+	// for (var i = 0; i < docs.length; i += 1) {
+	// 	docs[i].innerHTML = docs[i].innerText + '%'
+	// }
+});
+</script>
+</html>

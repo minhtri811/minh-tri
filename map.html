@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>INHANDAO</title>
+	<!-- Bootstrap implementation -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap&subset=vietnamese" rel="stylesheet" />
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.2/css/bootstrap-slider.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+</head>
+<body class="map-body">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"  crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.2/bootstrap-slider.min.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky">
+		<div class='container'>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<a class="navbar-brand" href="index.html"><img src='assets/logochuan.png' alt='logo' /></a>
+			<button class="btn btn-success my-2 my-sm-0 mobile-show" data-toggle="modal" data-target="#exampleModal">Đăng nhập</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="campaign.html">Chiến dịch <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Tài trợ</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Địa chỉ nhân đạo</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Bản đồ</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Giới thiệu</a>
+					</li>
+				</ul>
+				<form class="form-inline my-2 my-lg-0">
+					<button class="btn btn-outline-success my-2 my-sm-0 seach-btn" type="submit"><i class="fa fa-search"></i></button>
+				</form>
+			</div>
+			<button class="btn btn-success my-2 my-sm-0 mobile-hide" type="submit">Đăng nhập</button>
+		</div>
+  </nav>
+	<!--
+  <section class='sectionmap'>
+    <div class='left' id='style-1' style="overflow-y: scroll;">
+      <div class='address-text'> ĐỊA CHỈ </div>
+      <select class="form-control" id="exampleSelect1">
+        <option value=''>Tỉnh/ Thành phố</option>
+        <option>Hà Nội</option>
+        <option>Hà Nam</option>
+        <option>Hà Tây</option>
+        <option>Hà Bắc</option>
+      </select>
+      <select class="form-control" id="exampleSelect2">
+        <option value=''>Quận/ Huyện</option>
+        <option>Hà Đông</option>
+        <option>Bắc Từ Liêm</option>
+      </select>
+      <select class="form-control" id="exampleSelect3">
+        <option value=''>Phường/ xã</option>
+        <option>Đông Ngạc</option>
+        <option>Đống Đa</option>
+        <option>Nam Đồng</option>
+      </select>
+      <div class="form-group input-text">
+        <input placeholder="Nhập thông tin tìm kiếm" type="text" class="form-control" id="usr">
+      </div>
+      <button class="btn btn-success my-2 my-sm-0" style='width: 100%' type="submit">Tìm kiếm</button>
+      <div class='reconize-address'> ĐỊA CHỈ NHÂN ĐẠO ĐƯỢC XÁC NHẬN </div>
+      <div class='list'>
+        <div class='address'>
+						<div class='imgContainer'>
+							<img src='assets/heart.svg' alt='heart' />
+						</div>
+						<div class='text-container'>
+							<h6> Nguyen Minh A </h6>
+							<p> Nạn nhân chất độc da cam </p>
+							<span> 231 Trương Định, Hoàng Mai, Hà Nội </span>
+						</div>
+					</div>
+        <div class='address'>
+						<div class='imgContainer'>
+							<img src='assets/heart.svg' alt='heart' />
+						</div>
+						<div class='text-container'>
+							<h6> Nguyen Minh A </h6>
+							<p> Nạn nhân chất độc da cam </p>
+							<span> 231 Trương Định, Hoàng Mai, Hà Nội </span>
+						</div>
+					</div>
+        <div class='address'>
+						<div class='imgContainer'>
+							<img src='assets/heart.svg' alt='heart' />
+						</div>
+						<div class='text-container'>
+							<h6> Nguyen Minh A </h6>
+							<p> Nạn nhân chất độc da cam </p>
+							<span> 231 Trương Định, Hoàng Mai, Hà Nội </span>
+						</div>
+					</div>
+        <div class='address'>
+						<div class='imgContainer'>
+							<img src='assets/heart.svg' alt='heart' />
+						</div>
+						<div class='text-container'>
+							<h6> Nguyen Minh A </h6>
+							<p> Nạn nhân chất độc da cam </p>
+							<span> 231 Trương Định, Hoàng Mai, Hà Nội </span>
+						</div>
+					</div>
+				</div>
+      </div>
+			<div class='right'>
+				<a
+					tabindex="0"
+					role="button"
+					id='popover'
+					data-toggle="popover"
+					data-trigger="focus"
+					title="Thông tin địa chỉ nhân đạo"
+					data-placement="top"
+					data-popover-content="#data"
+				>
+					<img src='assets/pin.svg' alt='pin' />
+				</a>
+				<a
+					tabindex="0"
+					role="button"
+					id='popover'
+					data-toggle="popover"
+					data-trigger="focus"
+					title="Thông tin địa chỉ nhân đạo"
+					data-placement="top"
+					data-popover-content="#data"
+				>
+					<img src='assets/pin.svg' alt='pin' />
+				</a>
+				<a
+					tabindex="0"
+					role="button"
+					id='popover'
+					data-toggle="popover"
+					data-trigger="focus"
+					title="Thông tin địa chỉ nhân đạo"
+					data-placement="top"
+					data-popover-content="#data"
+				>
+					<img src='assets/pin.svg' alt='pin' />
+				</a>
+				<div id="data" style="display:none;">
+			    <div class="popover-body">
+						<span> HỌ VÀ TÊN: <strong> Nguyễn Văn A </strong> </span> <br />
+						<span> ĐỊA CHỈ: <strong> Nguyễn Văn A </strong> </span> <br />
+						<span> DẠNG ĐỐI TƯỢNG: <strong> Chất độc màu da cam </strong> </span> <br />
+						<span> NHU CẦU: <strong> Hỗ trợ tiền </strong> </span> <br />
+						<button class="btn btn-outline-success my-2 my-sm-0 seach-btn">Xem chi tiết</button>
+						<button class="btn btn-outline-success my-2 my-sm-0">Tìm đường <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></button>
+
+			    </div>
+		  	</div>
+			</div>
+    </div>
+  </section>
+	<script>
+		// $(function () {
+		//   $('[data-toggle="popover"]').popover()
+		// })
+
+	</script> -->
+	<div class="wrapper">
+			<!-- Sidebar  -->
+			<nav id="sidebar">
+				<div class='address-text'> ĐỊA CHỈ </div>
+				<div class='left' id='style-1' style="overflow-y: scroll;">
+					<select class="form-control" id="exampleSelect1">
+						<option value=''>Tỉnh/ Thành phố</option>
+						<option>Hà Nội</option>
+						<option>Hà Nam</option>
+						<option>Hà Tây</option>
+						<option>Hà Bắc</option>
+					</select>
+					<select class="form-control" id="exampleSelect2">
+						<option value=''>Quận/ Huyện</option>
+						<option>Hà Đông</option>
+						<option>Bắc Từ Liêm</option>
+					</select>
+					<select class="form-control" id="exampleSelect3">
+						<option value=''>Phường/ xã</option>
+						<option>Đông Ngạc</option>
+						<option>Đống Đa</option>
+						<option>Nam Đồng</option>
+					</select>
+					<div class="form-group input-text">
+						<input placeholder="Nhập thông tin tìm kiếm" type="text" class="form-control" id="usr">
+					</div>
+					<button class="btn btn-success my-2 my-sm-0" style='width: 100%' type="submit">Tìm kiếm</button>
+					<div class='reconize-address'> ĐỊA CHỈ NHÂN ĐẠO ĐƯỢC XÁC NHẬN </div>
+					<div class='list'>
+						<div class='address'>
+								<div class='imgContainer'>
+									<img src='assets/heart.svg' alt='heart' />
+								</div>
+								<div class='text-container'>
+									<h6> Nguyen Minh A </h6>
+									<p> Nạn nhân chất độc da cam </p>
+									<span> 231 Trương Định, Hoàng Mai, Hà Nội </span>
+								</div>
+							</div>
+						<div class='address'>
+								<div class='imgContainer'>
+									<img src='assets/heart.svg' alt='heart' />
+								</div>
+								<div class='text-container'>
+									<h6> Nguyen Minh A </h6>
+									<p> Nạn nhân chất độc da cam </p>
+									<span> 231 Trương Định, Hoàng Mai, Hà Nội </span>
+								</div>
+							</div>
+						<div class='address'>
+								<div class='imgContainer'>
+									<img src='assets/heart.svg' alt='heart' />
+								</div>
+								<div class='text-container'>
+									<h6> Nguyen Minh A </h6>
+									<p> Nạn nhân chất độc da cam </p>
+									<span> 231 Trương Định, Hoàng Mai, Hà Nội </span>
+								</div>
+							</div>
+						<div class='address'>
+								<div class='imgContainer'>
+									<img src='assets/heart.svg' alt='heart' />
+								</div>
+								<div class='text-container'>
+									<h6> Nguyen Minh A </h6>
+									<p> Nạn nhân chất độc da cam </p>
+									<span> 231 Trương Định, Hoàng Mai, Hà Nội </span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+			</nav>
+
+			<!-- Page Content  -->
+			<div id="content">
+				<button type="button" id="sidebarCollapse" class="btn btn-info">
+						<i class="fa fa-bars"></i>
+				</button>
+				<div class='map'>
+					<a
+						tabindex="0"
+						class='pin'
+						role="button"
+						id='popover'
+						data-toggle="popover"
+						data-trigger="focus"
+						title="Thông tin địa chỉ nhân đạo"
+						data-placement="top"
+						data-popover-content="#data"
+					>
+						<img src='assets/pin.svg' alt='pin' />
+					</a>
+					<a
+						tabindex="0"
+						class='pin'
+						role="button"
+						id='popover'
+						data-toggle="popover"
+						data-trigger="focus"
+						title="Thông tin địa chỉ nhân đạo"
+						data-placement="top"
+						data-popover-content="#data"
+					>
+						<img src='assets/pin.svg' alt='pin' />
+					</a>
+					<a
+						tabindex="0"
+						class='pin'
+						role="button"
+						id='popover'
+						data-toggle="popover"
+						data-trigger="focus"
+						title="Thông tin địa chỉ nhân đạo"
+						data-placement="top"
+						data-popover-content="#data"
+					>
+						<img src='assets/pin.svg' alt='pin' />
+					</a>
+					<a
+						tabindex="0"
+						class='pin'
+						role="button"
+						id='popover'
+						data-toggle="popover"
+						data-trigger="focus"
+						title="Thông tin địa chỉ nhân đạo"
+						data-placement="top"
+						data-popover-content="#data"
+					>
+						<img src='assets/pin.svg' alt='pin' />
+					</a>
+				</div>
+
+			</div>
+			<div id="data" style="display:none;">
+				<div class="popover-body">
+					<span> HỌ VÀ TÊN: <strong> Nguyễn Văn A </strong> </span> <br />
+					<span> ĐỊA CHỈ: <strong> Nguyễn Văn A </strong> </span> <br />
+					<span> DẠNG ĐỐI TƯỢNG: <strong> Chất độc màu da cam </strong> </span> <br />
+					<span> NHU CẦU: <strong> Hỗ trợ tiền </strong> </span> <br />
+					<button class="btn btn-outline-success my-2 my-sm-0 seach-btn">Xem chi tiết</button>
+					<button class="btn btn-outline-success my-2 my-sm-0">Tìm đường <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></button>
+
+				</div>
+			</div>
+	</div>
+
+	<!-- jQuery CDN - Slim version (=without AJAX) -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<!-- Popper.JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+	<!-- Bootstrap JS -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+			$(document).ready(function () {
+					$('#sidebarCollapse').on('click', function () {
+							$('#sidebar').toggleClass('active');
+					});
+					$("[data-toggle=popover]").popover({
+			        html : true,
+			        trigger: 'focus',
+			        content: function() {
+			            var content = $(this).attr("data-popover-content");
+			            return $(content).children(".popover-body").html();
+			        }
+			    });
+					$('.popover-dismiss').popover({
+					  trigger: 'focus'
+					})
+			});
+	</script>
+</body>
+
+</html>
