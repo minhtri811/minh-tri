@@ -19,6 +19,18 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.2/bootstrap-slider.min.js" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+	<script>
+	 fetch('http://34.87.112.69:8080/api/summary')
+		  .then((response) => {
+				console.log('rrr', response)
+		    return response.json();
+		  })
+		  .then((myJson) => {
+				console.log('jjj', myJson)
+		    console.log(myJson);
+				document.getElementById("address").innerHTML = myJson.strategy
+		  });
+	</script>
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light sticky">
 		<div class='container'>
@@ -89,7 +101,7 @@
         <div class='item col-md-3 col-sm-6 col-6'>
           <img src='assets/address.svg' alt='icon1' />
           <div class='itemText'>
-            <h2>13445</h2>
+            <h2 id='address'>13445</h2>
             <h6>Địa chỉ nhân đạo</h6>
           </div>
         </div>
@@ -515,7 +527,7 @@
 														<div class="input-group-prepend">
 														<span class="input-group-text"> <i class="fa fa-lock"></i> </span>
 													</div>
-													<input name="" class="form-control" placeholder="Mật khẩu" type="text">
+													<input name="" class="form-control" placeholder="Mật khẩu" type="password">
 												</div>
 												</div>
 
